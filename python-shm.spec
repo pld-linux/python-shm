@@ -1,5 +1,4 @@
 
-%include	/usr/lib/rpm/macros.python
 %define	module	shm
 
 Summary:	Python's Shared Memory Module
