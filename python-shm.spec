@@ -12,12 +12,12 @@ Group:		Libraries/Python
 # Source0:	http://ftp.psychosis.com/python/%{module}-%{version}.tar.gz
 Source0:	http://gigue.peabody.jhu.edu/~mdboom/omi/source/shm_source/shmmodule.c
 Source1:	python-shm-setup.py
+URL:		http://gigue.peabody.jhu.edu/~mdboom/omi/source/shm_source/shm.html
 BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	python-modules
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-URL:	http://gigue.peabody.jhu.edu/~mdboom/omi/source/shm_source/shm.html
 
 %description
 This module provides an object interface to System V shared memory
