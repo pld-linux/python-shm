@@ -6,7 +6,7 @@ Summary:	Python's Shared Memory Module
 Summary(pl):	Modu³ Pythona do obs³ugi pamiêci dzielonej
 Name:		python-%{module}
 Version:	1.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries/Python
 # Source0:	http://ftp.psychosis.com/python/%{module}-%{version}.tar.gz
