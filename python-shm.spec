@@ -1,18 +1,17 @@
 
-# TODO: fix %prep section
-
 %include	/usr/lib/rpm/macros.python
 %define module shm
 
 Summary:	Python's Shared Memory Module
-Summary(pl):	TODO
+Summary(pl):	Modu³ Pythona do obs³ugi pamiêci dzielonej
 Name:		python-%{module}
 Version:	1.0
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Libraries/Python
 # Source0:	http://ftp.psychosis.com/python/%{module}-%{version}.tar.gz
 Source0:	http://gigue.peabody.jhu.edu/~mdboom/omi/source/shm_source/shmmodule.c
+# Source0-md5:	a46c665160a20e581570924b8fa1a6d7
 Source1:	python-shm-setup.py
 BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	python-modules
@@ -25,7 +24,9 @@ This module provides an object interface to System V shared memory
 IPC, present in most Unix systems.
 
 %description -l pl
-TODO
+Ten modu³ udostêpnia obiektowy interfejs do komunikacji miêdzy
+procesami opartej na pamiêci wspó³dzielonej, jaka jest dostêpna
+w wiêkszo¶ci systemów Unixowych.
 
 %prep
 %setup -q -c -T
