@@ -14,7 +14,6 @@ Source1:	python-shm-setup.py
 URL:		http://gigue.peabody.jhu.edu/~mdboom/omi/source/shm_source/shm.html
 BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	python-modules
-BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
