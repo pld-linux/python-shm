@@ -18,6 +18,7 @@ BuildRequires:	python-modules
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+URL:	http://gigue.peabody.jhu.edu/~mdboom/omi/source/shm_source/shm.html
 
 %description
 This module provides an object interface to System V shared memory
