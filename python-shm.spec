@@ -17,7 +17,7 @@ Source1:	python-shm-setup.py
 BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	python-modules
 BuildRequires:	rpm-pythonprov
-%pyrequires_eq	python
+%pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,10 +28,9 @@ IPC, present in most Unix systems.
 TODO
 
 %prep
-rm -rf $RPM_BUILD_ROOT
-mkdir $RPM_BUILD_ROOT
-cp %{SOURCE0} $RPM_BUILD_ROOT
-cp %{SOURCE1} $RPM_BUILD_ROOT
+%setup -q -c -T
+install %{SOURCE0} .
+install %{SOURCE1} .
 
 %build
 python python-shm-setup.py build
