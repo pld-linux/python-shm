@@ -11,7 +11,6 @@ License:	GPL
 Group:		Libraries/Python
 # Source0:	http://ftp.psychosis.com/python/%{module}-%{version}.tar.gz
 Source0:	http://gigue.peabody.jhu.edu/~mdboom/omi/source/shm_source/shmmodule.c
-# Source0-md5:	a46c665160a20e581570924b8fa1a6d7
 Source1:	python-shm-setup.py
 BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	python-modules
