@@ -1,6 +1,6 @@
 
 %include	/usr/lib/rpm/macros.python
-%define module shm
+%define	module	shm
 
 Summary:	Python's Shared Memory Module
 Summary(pl):	Modu³ Pythona do obs³ugi pamiêci dzielonej
@@ -26,7 +26,7 @@ IPC, present in most Unix systems.
 %description -l pl
 Ten modu³ udostêpnia obiektowy interfejs do komunikacji miêdzy
 procesami opartej na pamiêci wspó³dzielonej, jaka jest dostêpna
-w wiêkszo¶ci systemów Unixowych.
+w wiêkszo¶ci systemów uniksowych.
 
 %prep
 %setup -q -c -T
