@@ -2,7 +2,7 @@
 %define	module	shm
 
 Summary:	Python's Shared Memory Module
-Summary(pl):	Modu³ Pythona do obs³ugi pamiêci dzielonej
+Summary(pl.UTF-8):   ModuÅ‚ Pythona do obsÅ‚ugi pamiÄ™ci dzielonej
 Name:		python-%{module}
 Version:	1.0
 Release:	4
@@ -21,10 +21,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This module provides an object interface to System V shared memory
 IPC, present in most Unix systems.
 
-%description -l pl
-Ten modu³ udostêpnia obiektowy interfejs do komunikacji miêdzy
-procesami opartej na pamiêci wspó³dzielonej, jaka jest dostêpna
-w wiêkszo¶ci systemów uniksowych.
+%description -l pl.UTF-8
+Ten moduÅ‚ udostÄ™pnia obiektowy interfejs do komunikacji miÄ™dzy
+procesami opartej na pamiÄ™ci wspÃ³Å‚dzielonej, jaka jest dostÄ™pna
+w wiÄ™kszoÅ›ci systemÃ³w uniksowych.
 
 %prep
 %setup -q -c -T
