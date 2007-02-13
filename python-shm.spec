@@ -2,7 +2,7 @@
 %define	module	shm
 
 Summary:	Python's Shared Memory Module
-Summary(pl.UTF-8):   Moduł Pythona do obsługi pamięci dzielonej
+Summary(pl.UTF-8):	Moduł Pythona do obsługi pamięci dzielonej
 Name:		python-%{module}
 Version:	1.0
 Release:	4
