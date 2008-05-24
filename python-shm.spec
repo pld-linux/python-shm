@@ -4,14 +4,13 @@
 Summary:	Python's Shared Memory Module
 Summary(pl.UTF-8):	Moduł Pythona do obsługi pamięci dzielonej
 Name:		python-%{module}
-Version:	1.0
-Release:	4
+Version:	1.2.2
+Release:	1
 License:	GPL
 Group:		Libraries/Python
-# Source0:	http://ftp.psychosis.com/python/%{module}-%{version}.tar.gz
-Source0:	http://gigue.peabody.jhu.edu/~mdboom/omi/source/shm_source/shmmodule.c
-Source1:	python-shm-setup.py
-URL:		http://gigue.peabody.jhu.edu/~mdboom/omi/source/shm_source/shm.html
+Source0:	http://nikitathespider.com/python/%{module}/%{module}-%{version}.tar.gz
+# Source0-md5:	da6f51301262605c99c3813019831c50
+URL:		http://nikitathespider.com/python/shm/
 BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	python-modules
 %pyrequires_eq	python-modules
@@ -27,16 +26,20 @@ procesami opartej na pamięci współdzielonej, jaka jest dostępna
 w większości systemów uniksowych.
 
 %prep
-%setup -q -c -T
-install %{SOURCE0} .
-install %{SOURCE1} .
+%setup -q -n   %{module}-%{version}
 
 %build
-python python-shm-setup.py build
+%{__python} setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-python python-shm-setup.py install --optimize=2 --root=$RPM_BUILD_ROOT
+
+%{__python} setup.py install \
+	--optimize=2 \
+	--install-data %{_datadir} \
+	--root=$RPM_BUILD_ROOT
+
+%py_postclean
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -44,3 +47,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{py_sitedir}/shm.so
+%{py_sitedir}/shm_wrapper.*
