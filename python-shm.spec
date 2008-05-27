@@ -8,11 +8,13 @@ Version:	1.2.2
 Release:	1
 License:	GPL
 Group:		Libraries/Python
-Source0:	http://nikitathespider.com/python/%{module}/%{module}-%{version}.tar.gz
+Source0:	http://nikitathespider.com/python/shm/%{module}-%{version}.tar.gz
 # Source0-md5:	da6f51301262605c99c3813019831c50
 URL:		http://nikitathespider.com/python/shm/
 BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	python-modules
+BuildRequires:	rpm-pythonprov
+BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -26,7 +28,7 @@ procesami opartej na pamięci współdzielonej, jaka jest dostępna
 w większości systemów uniksowych.
 
 %prep
-%setup -q -n   %{module}-%{version}
+%setup -q -n %{module}-%{version}
 
 %build
 %{__python} setup.py build
