@@ -5,7 +5,7 @@ Summary:	Python's Shared Memory Module
 Summary(pl.UTF-8):	Moduł Pythona do obsługi pamięci dzielonej
 Name:		python-%{module}
 Version:	1.2.2
-Release:	3
+Release:	4
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://nikitathespider.com/python/shm/%{module}-%{version}.tar.gz
